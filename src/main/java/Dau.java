@@ -6,24 +6,15 @@ public class Dau {
     Random random = new Random();
     Scanner scanner = new Scanner(System.in);
     int numVeces;
+    int dados[] = new int[numVeces];
+    int dado;
 
-    void introducirVeces(){
-        System.out.print("Quantes vegades vols llançar els daus? ");
-        numVeces = scanner.nextInt();
+    public void tirardados(){
+        dado = (int) (Math.random() * 6) + 1;
     }
 
-    void tirardados(){
-        int veces;
-        veces = numVeces;
-        ArrayList dado = new ArrayList();
-
-        for (int i = 0; i < numVeces ; i++) {
-            int num = random.nextInt();
-            System.out.println(num);
-        }
+    void imprimir(){
+        System.out.print(dado + " ");
     }
-
-
-
-
 }
+
